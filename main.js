@@ -14,23 +14,31 @@ function lireNombre (id) {
 } 
  
 
-//n is the number of lines in your pyramid 
-function displayPyramid(n) {
-  for (var i = 0; i < n; i++) {
-    var str = '';
-    for (var j = 1; j < n-i; j++) {
-      str = str + ' ';
+
+function createHalfPyramid (height) {
+if ( height < 25 ) {
+
+  for (var i = 0; i <= height; i++) {
+    var row = '';
+
+    for (var j = 1; j <= height-i ; j++) {
+      row = row + ' ';
     }
-    for (var k = 1; k <= (2*i+1); k++) {
-      str = str + '*';
-    }
-    console.log(str);
+  for (var k = 1; k <= (2*i+1); k++) {
+	  row+="#";
+  }
+    console.log(row);
   }
 }
-function onClickDessinePyramid() {
+else if ( height >=25) {
+	console.log ("error");
+}
+}
+
+function onClickDessineTriangle() {
  
     var nbLignes = lireNombre("nbLignes");
      
-  createPyramid (nbLignes);
+  createHalfPyramid (nbLignes);
      
 }
