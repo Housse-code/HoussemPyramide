@@ -1,4 +1,4 @@
-    function lireNombre (id) {
+function lireNombre (id) {
    
     var elNombre = document.getElementById(id);
 
@@ -21,7 +21,7 @@ function createHalfPyramid (height) {
     var row = '';
 
     for (var j = 1; j <= i; j++) {
-      row += '*';
+      row += '#';
     }
 
     console.log(row);
