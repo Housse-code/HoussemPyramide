@@ -1,11 +1,13 @@
-function generatePyramid() {
-  var totalNumberofRows = 5;
-  var arr = new Array();
-  for (var i = 1; i <= totalNumberofRows; i++) {
-    for (var j = 1; j <= i; j++) {
-      arr.push(j);
-      console.log(j);
+    //n is the number of lines in your pyramid  
+    function displayPyramid(n) {
+      for (var i = 0; i < n; i++) {
+        var str = '';
+        for (var j = 1; j < n-i; j++) {
+          str = str + ' ';
+        }
+        for (var k = 1; k <= (2*i+1); k++) {
+          str = str + '*';
+        }
+        console.log(str);
+      }
     }
-    console.log("\n");
-  }
-}
