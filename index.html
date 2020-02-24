@@ -1,27 +1,22 @@
-<script type="text/javascript">
-
-var i, j, k=2*n-2;
-
-var n = 5;
-
-for (i=0; i<n; i++) {
-
-for(j=1; j<k; j++) {
-
-document.write("&nbsp");
-
-}
-
-k=k-1;
-
-for(j=1; j<=i; j++) {
-
-document.write("* ");
-
-}
-
-document.write("<br/>");
-
-}
-
-</script
+<!doctype html>
+<html>
+ 
+<head>
+    <meta charset="UTF-8">
+    <title>Triangle Pattern</title>
+</head>
+ 
+<body>
+    <h1>05 : triangle</h1>
+     
+    Nombre lignes : <input type="text" id="nbLignes"><br>
+     
+    <button onclick="onClickDessineTriangle()">Dessiner triangle</button>
+    <hr>
+ 
+    <div id="triangle"></div>
+     
+    <script src="main.js"></script>
+</body>
+ 
+</html>
