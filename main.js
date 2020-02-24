@@ -14,7 +14,7 @@ function lireNombre (id) {
 } 
  
 
-
+//n is the number of lines in your pyramid 
 function displayPyramid(n) {
   for (var i = 0; i < n; i++) {
     var str = '';
@@ -31,6 +31,6 @@ function onClickDessinePyramid() {
  
     var nbLignes = lireNombre("nbLignes");
      
-  createHalfPyramid (nbLignes);
+  createPyramid (nbLignes);
      
 }
