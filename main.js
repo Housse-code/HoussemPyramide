@@ -1,20 +1,21 @@
-var nbTraits
-var nbEtoiles
-var nombreLu
-var message = ""
-nombreLu = parseInt(prompt("Entrer un nombre:"));
-// Parcourir chaque ligne 
-for (var noLigne=1;noLigne<=nombreLu;noLigne++){
-	// Calculer le nb de chiffres et de zéros à écrire sur la ligne courante
-	nbEtoiles = nombreLu - noLigne + 1;
-	nbTraits = nombreLu - nbEtoiles;
-	// Écrire les traits de la ligne courante
-	for (i=1;i<=nbTraits;i++){
-		message += "-";
-	}
-	// Écrire les etoiles de la ligne courante
-	for (var noEtoiles=nbEtoiles;noEtoiles>=1;noEtoiles--){
-		message += "*";
-	}
-	message += "<br />";
+//set the value of n here      
+var n = 5;
+generateNumberTriangle(n);
+
+function generateNumberTriangle(n) {
+    var width = (2 * n) -1; // Always the case.
+    var midpoint = Math.floor(width / 2); // Middle of pyramid.
+    let level = ''; // will be reset each level loop
+
+    for(var i = 0; i < n; i++) { // Looping through levels
+        level = '';
+        for(var j = 0; j < width; j++) {
+            if(j < midpoint-i || j > midpoint+i) {
+                level += '.';
+            } else {
+                level += '#';
+            }
+        }
+        console.log(level);
+    }
 }
